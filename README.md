@@ -4,15 +4,12 @@ Welcome to your new dbt project!
 
 Try running the following commands:
 - **dbt run**
-  How do I run one model at a time?
-- **dbt run --models customers**
+- **dbt run --models customers** (How do I run one model at a time?)
 
 - **dbt test**
-  How do I test one model at a time?
-- **dbt test --models customers**
+- **dbt test --models customers** (How do I test one model at a time?)
 
-To generate documentation, use:
-- **dbt doc generate**
+- **dbt doc generate** (To generate documentation, use this command)
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
