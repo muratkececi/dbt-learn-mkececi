@@ -12,6 +12,17 @@ models:
       - name: first_order_date
         description: NULL when a customer has not yet placed an order.
 
+  - name: orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+
   - name: stg_customers
     description: This model cleans up customer data
     columns:
@@ -36,6 +47,3 @@ models:
       - name: customer_id
         tests:
           - not_null
-          - relationships:
-              to: ref('stg_customers')
-              field: customer_id
