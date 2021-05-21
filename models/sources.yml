@@ -25,3 +25,20 @@ sources:
           - name: orderid
             tests:
               - not_null    
+
+
+  - name: snowplow
+    database: raw
+    loaded_at_field: collector_tstamp
+    freshness:
+      error_after: {count: 1, period: hour}
+    tables:
+      - name: events         
+
+
+  - name: ticket_tailor
+    database: raw
+    tables:
+      - name: events              
+      - name: orders   
+      - name: issued_tickets   
